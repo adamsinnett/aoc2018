@@ -1,15 +1,13 @@
 #![feature(cell_update)]
 
-const INPUT: &str = include_str!("day1.txt");
 use std::cell::Cell;
 use std::collections::HashSet;
 
 fn main() {
     let mut set = HashSet::new();
-
     let frequency = Cell::new(0);
 
-    INPUT
+    include_str!("day1.txt")
         .lines()
         .flat_map(|s| s.parse::<isize>().ok())
         .cycle()
