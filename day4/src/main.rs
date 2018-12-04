@@ -90,7 +90,6 @@ fn part2() {
         }
 
         if action.action == 3 {
-            let minutes = action.minute - falls_asleep;
             for n in falls_asleep..action.minute {
                 *guard_minute.entry((current_guard, n)).or_insert(0) += 1;
             }
