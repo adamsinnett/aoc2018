@@ -1,0 +1,13 @@
+[package]
+name = "advent_of_code_2018"
+version = "0.1.0"
+authors = ["Adam Sinnett <asinnett@miradorfin.com>"]
+edition = "2018"
+
+[lib]
+bench = false
+
+[dependencies]
+aoc-runner = "0.2.0"
+aoc-runner-derive = "0.2.0"
+
