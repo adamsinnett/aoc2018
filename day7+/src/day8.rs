@@ -30,7 +30,6 @@ fn walk(input: &mut VecDeque<usize>) -> (usize, usize) {
   }
       
   let meta_total = meta_entry.iter().fold(0, |a,t| a+t);
-
   return if children == 0 {
     (totals + meta_total, meta_total)
   } else {
