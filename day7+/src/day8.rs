@@ -12,11 +12,12 @@ fn part1(input: &Vec<usize>) -> usize {
 }
 
 fn walk(input: &mut VecDeque<usize>) -> (usize, usize) {
-  let mut totals = 0;
-  let mut values = HashMap::new();
   let children = input.pop_front().unwrap_or(0);
   let metadata = input.pop_front().unwrap_or(0);
 
+
+  let mut totals = 0;
+  let mut values = HashMap::new();
   for n in 0..children {
     let (total, value) = walk(input);
     totals += total;
@@ -24,7 +25,6 @@ fn walk(input: &mut VecDeque<usize>) -> (usize, usize) {
   }
 
   let mut meta_entry = Vec::new();
-
   for _ in 0..metadata {
     meta_entry.push(input.pop_front().unwrap_or(0));
   }
